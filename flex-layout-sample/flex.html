@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <style type="text/css">
+    .form-row {
+        padding: 10px 0;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+
+    .form-row label {
+        padding-right: 10px;
+        flex: 1;
+    }
+
+    .form-row input {
+        flex: 3;
+    }
+
+    .main-column {
+        flex: 3;
+        order: 2;
+    }
+
+    .sidebar-one {
+        flex: 1;
+        order: 1;
+    }
+
+    .sidebar-two {
+        flex: 1;
+        order: 3;
+    }
+
+    .call-out {
+        width: 32%;
+    }
+
+    @media (max-width: 900px) {
+        .call-out {
+            width: 100%;
+        }
+    }
+
+    .call-out:nth-child(1) {
+        background-color: #c0dbe2;
+    }
+
+    .call-out:nth-child(2) {
+        background-color: #cdf1c3;
+    }
+
+    .call-out:nth-child(3) {
+        background-color: #ccb9da;
+    }
+
+    .smallItem {
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        font-size: 60px;
+        width: 150px;
+        height: 100px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .baner {
+        height: 400px;
+        background-color: #2a2a2a;
+        font-size: 80px;
+        color: white;
+    }
+
+    .center_me {
+        margin: auto;
+    }
+    .first {
+        padding: 20px;
+        flex: 1;
+    }
+    .second {
+        flex: 1;
+        background-color: red;
+
+    }
+    .second-a { background-color: yellow; flex: 1; }
+    .second-b { background-color: blue; flex: 1; }
+    </style>
+</head>
+
+<body>
+    <div class="container shadow p-3 mb-5 bg-white rounded">
+        <form action="">
+            <div class="form-row">
+                <label for="">Name：</label>
+                <input type="text" id="name">
+            </div>
+            <div class="form-row">
+                <label for="">Favorite color：</label>
+                <input type="text" id="favColor">
+            </div>
+        </form>
+    </div>
+    <div class="column-layout container d-flex shadow rounded p-5 justify-content-around align-items-center">
+        <div class="main-column">
+            <h2>Main-Column</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aut, eos veritatis reprehenderit enim deleniti unde dolores iure sint expedita saepe obcaecati omnis, mollitia praesentium, necessitatibus impedit, debitis inventore. Illo.</p>
+        </div>
+        <div class="sidebar-one">
+            <h2>sidebar one</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aut, eos veritatis reprehenderit enim deleniti unde dolores iure sint expedita saepe obcaecati omnis, mollitia praesentium, necessitatibus impedit, debitis inventore. Illo.</p>
+        </div>
+        <div class="sidebar-two">
+            <h2>sidebar one</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aut, eos veritatis reprehenderit enim deleniti unde dolores iure sint expedita saepe obcaecati omnis, mollitia praesentium, necessitatibus impedit, debitis inventore. Illo.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat aut, eos veritatis reprehenderit enim deleniti unde dolores iure sint expedita saepe obcaecati omnis, mollitia praesentium, necessitatibus impedit, debitis inventore. Illo.</p>
+        </div>
+    </div>
+    <div class="call-outs-container container d-md-flex align-items-md-end justify-content-md-between align-items-md-end mb-5 mt-5 p-0">
+        <div class="call-out p-3 shadow">
+            <h4>Feature 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti error incidunt officia dolor odio autem culpa! Repudiandae quisquam repellendus ut quod. At nihil provident delectus et nisi voluptatibus qui enim.</p>
+        </div>
+        <div class="call-out p-3 shadow">
+            <h4>Feature 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. .</p>
+        </div>
+        <div class="call-out p-3 shadow">
+            <h4>Feature 1</h4>
+            <p>Lorem ipsum dolor sit amet, </p>
+        </div>
+    </div>
+    <div class="container p-5 d-flex justify-content-around align-items-center flex-wrap shadow mb-5">
+        <div class="smallItem p-3">1</div>
+        <div class="smallItem p-3">2</div>
+        <div class="smallItem p-3">3</div>
+        <div class="smallItem p-3">4</div>
+        <div class="smallItem p-3">5</div>
+    </div>
+    <div class="baner container shadow d-flex mb-5">
+        <div class="center_me">Center me plz</div>
+    </div>
+    <div class="equal-hight-container container shadow d-flex p-0">
+        <div class="first">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="second d-flex flex-column">
+            <div class="second-a">A</div>
+            <div class="second-b">B</div>
+        </div>
+    </div>
+</body>
+
+</html>
