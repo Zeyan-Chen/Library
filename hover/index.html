@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    body {
+        font-family: "Raleway", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.45;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        max-width: 100%;
+        background-color: var(--black);
+        color: var(--text-color);
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    h1,
+    h2,
+    .item {
+        text-transform: lowercase;
+    }
+
+    .item {
+        outline: none;
+        color: var(--black);
+        text-shadow: 0 1px 1px rgba(255, 255, 255, .75);
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        transition: all ease-in-out 300ms;
+        position: relative;
+        z-index: 10;
+        height: calc(100% / 6);
+    }
+
+
+    .item span::before,
+    .item span::after {
+        position: absolute;
+        top: 50%;
+        font-size: 60%;
+        transform: translateY(-50%);
+    }
+
+    .item span::after {
+        content: '>';
+        padding-left: .3em;
+    }
+
+    .item span::before,
+    .item span::after {
+        transition: transform .2s ease-in-out .1s, opacity .2s ease-in-out .1s;
+        opacity: 0;
+    }
+
+    .item span::before {
+        transform: translate(-100%, -100%);
+    }
+
+    .item span::after {
+        transform: translate(100%, 100%);
+    }
+
+    .item:focus span::before,
+    .item:focus span::after,
+    .item:hover span::before,
+    .item:hover span::after {
+        transform: translate(0, -50%);
+        opacity: 1;
+        color: white;
+    }
+
+    .item span::before {
+        content: '<';
+        margin-left: -12px;
+    }
+
+    .item:hover,
+    .item:focus {
+        color: white;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
+    }
+    </style>
 </head>
+
 <body>
-	
+    <div class="content">
+        <a href="#work" class="item work two"><span>Work</span></a>
+    </div>
 </body>
+
 </html>
