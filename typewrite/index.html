@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    <style type="text/css">
+    /*@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");*/
+
+    html {
+        background-color: rgb(25, 25, 25);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        font-family: 'Anonymous Pro', monospace;
+        color: rgba(255, 255, 255, .75);
+        font-size: 30px;
+    }
+
+    .line {
+        position: relative;
+        top: 0;
+        width: 15em;
+        border-right: 2px solid rgba(255, 255, 255, .75);
+        font-size: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .anim-typewrite {
+        animation: typewriter 4s steps(40) 1s 1 normal both,
+        blinkTextCursor 500ms steps(40) infinite normal;
+    }
+
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 15em;
+        }
+    }
+
+    @keyframes blinkTextCursor {
+        from {
+            border-right-color: rgba(255, 255, 255, .75);
+        }
+        to {
+            border-right-color: transparent;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <p class="line anim-typewrite">typewrite effect use test()</p>
+</body>
+
+</html>
