@@ -10,7 +10,10 @@
     /*@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");*/
 
     html {
-        background-color: rgb(25, 25, 25);
+        background: url(bg.jpg) center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-color: #fff;
         width: 100vw;
         height: 100vh;
     }
@@ -19,10 +22,17 @@
         margin: 0;
         padding: 0;
     }
+    div {
+    	position: fixed;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    }
 
+/* start copy */
     p {
         font-family: 'Anonymous Pro', monospace;
-        color: rgba(255, 255, 255, .75);
+        color: rgba(0, 0, 0, .75);
         font-size: 30px;
     }
 
@@ -63,7 +73,10 @@
 </head>
 
 <body>
-    <p class="line anim-typewrite">typewrite effect use test()</p>
+    <div>
+    	<!-- start copy -->
+    	<p class="line anim-typewrite">typewrite effect use test()</p>
+    </div>
 </body>
 
 </html>
