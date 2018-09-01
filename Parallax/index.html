@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <style type="text/css">
+    .hero {
+        /*background-image: url("me.jpg");*/
+        background-image: url("https://unsplash.it/1500?random");
+        /* 可以隨機圖片範例 */
+        background-size: cover;
+        background-position: center;
+        width: 100wh;
+        height: 100vh;
+        display: flex;
+        position: relative;
+    }
+
+    .hero:before {
+        content: "";
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, .7);
+        top: 0;
+        left: 0;
+    }
+
+    .center-content {
+        width: 400px;
+        display: flex;
+        z-index: 2;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .center-content h1,
+    .center-content h3 {
+        color: white;
+        line-height: 1;
+    }
+
+    .center-content h1 {
+        text-transform: uppercase;
+        font-size: 3em;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .center-content h3 {
+        margin-bottom: 40px;
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    .button {
+        text-transform: uppercase;
+        color: white;
+        padding: 20px;
+        border: 1px solid white;
+        text-decoration: none;
+    }
+
+    .button:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.7);
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="center-content">
+            <h1>I ˙ ＡＭ ˙ ＸＸＸ</h1>
+            <h3>A longer subtitle but still important</h3>
+            <a href="#" class="button">Some Action Here</a>
+        </div>
+    </header>
+    <main id="main">
+        <section class="row-xs main-xs-center cross-xs-center">
+            <h3>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ut ultricies ante, eu accumsan mi. Donec mattis varius suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lorem, mattis porta sollicitudin efficitur, maximus eu nisi. Mauris ut massa at felis tincidunt ullamcorper ac ut ligula. Proin volutpat sapien in eleifend accumsan. Pellentesque sed finibus massa.</h3>
+        </section>
+        <section class="row-xs main-xs-center cross-xs-center">
+            <h3>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ut ultricies ante, eu accumsan mi. Donec mattis varius suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lorem, mattis porta sollicitudin efficitur, maximus eu nisi. Mauris ut massa at felis tincidunt ullamcorper ac ut ligula. Proin volutpat sapien in eleifend accumsan. Pellentesque sed finibus massa.</h3>
+        </section>
+    </main>
+    <script type="text/javascript">
+    $(document.body).on('click', 'a[href*="#"]', function(e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 900);
+    });
+
+    $(window).on('scroll', function() {
+        var scrolled = $(window).scrollTop();
+        var height = $(window).height();
+        if (scrolled < height) {
+            $('.full-image').css({
+                'top': -scrolled * .5
+            });
+        }
+    });
+    </script>
+</body>
+
+</html>
