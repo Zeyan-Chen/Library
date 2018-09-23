@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #slider {
+            width: 100%;
+            margin: auto;
+        }
+
+        ul {
+            width: calc(100% * 3);
+            position: relative;
+            overflow: auto;
+            transition: all .1s ease-in-out;
+        }
+
+        li {
+            width: calc(100% / 3);
+            float: left;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .animation {
+            animation: move .3s ease both;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0
+            }
+
+            100% {
+                left: -100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <ul>
+            <li>
+                <img src="images/taeyeon_1.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/taeyeon_2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/taeyeon_3.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <script src="all.js"></script>
+</body>
+
+</html>
