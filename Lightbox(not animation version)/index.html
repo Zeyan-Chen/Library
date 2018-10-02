@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+        }
+
+        .openLightBox {
+            cursor: pointer;
+        }
+
+        .lightBoxBG {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .lightBox {
+            width: 70%;
+            max-width: 800px;
+            padding: 40px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border-radius: 15px;
+            z-index: 100;
+        }
+
+        .lightBox>img {
+            width: 100%;
+        }
+
+        .lightBox>.close {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .lightBox>.close:before,
+        .lightBox>.close:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .lightBox>.close:before {
+            transform: rotate(45deg)
+        }
+
+        .lightBox>.close:after {
+            transform: rotate(-45deg)
+        }
+    </style>
+</head>
+
+<body>
+    <img src="penguin.jpg" alt="" class="openLightBox">
+    <img src="penguin1.jpg" alt="" class="openLightBox">
+    <script src="lightbox.js"></script>
+</body>
+
+</html>
